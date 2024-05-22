@@ -1,16 +1,17 @@
-import Tipo from '../../app/models/tipo.js'
+import Tipo from '#models/tipo'
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 
 export default class extends BaseSeeder {
   async run() {
     // Write your database queries inside the run method
-
-    return await Tipo.createMany([
+     await Tipo.createMany([
       {nome: 'Bebidas'},
-      {nome: 'hamburguers'},
+      {nome: 'Molhos'},
+      {nome: 'Hamburgues'},
+      {nome: 'Porções'},
       {nome: 'Sobremesas'},
-      {nome: 'hot-dog'},
-      {nome: 'porções'},
+      {nome: 'Hot_Dog'}
+
     ])
   }
 }
